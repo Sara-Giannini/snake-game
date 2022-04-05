@@ -2,7 +2,7 @@
 
 ## Clássico Snake Game utilizando javascript
     Pretendo adicionar mais detalhes visuais no jogo futuramente. 
-    Desenvolvido com o intuito de aprender um pouco mais sobre funções
+    Desenvolvido com o intuito de aprender um pouco mais sobre as funções
     da linguagem.
 > link do jogo: https://cobrinha-da-sarinha.netlify.app/
 
