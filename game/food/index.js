@@ -1,7 +1,7 @@
 import { generateRandomBoardPosition } from '../board/index.js';
 import { collision as snakeCollision, expandSnake} from '../snake/index.js';
 
-const EXPANSION_RATE = 2; // TAXA DE EXPANSÃO DA COBRINHA
+const EXPANSION_RATE = 2;
 let foodPosition = generateRandomFoodPosition();
 export function update() {
   if (snakeCollision(foodPosition)) {

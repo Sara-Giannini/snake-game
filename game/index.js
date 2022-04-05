@@ -3,17 +3,15 @@ import { draw as drawFood, update as updateFood } from './food/index.js'
 import { gameboard, isOutsideBoard } from './board/index.js';
 
 let lastTimeRender = 0;
-
 function main(currentTime) {
   if (checkGameOver()) {
-    if(confirm('Você Perdeu o Jogo')) {
+    if(confirm('Você perdeu.\n🍎Colete as frutinhas e evite que a cobrinha colida com as paredes ou em si mesma!!🍎\nAperte ok para começar 🐍')) {
       window.location.reload();
     } else {
       window.requestAnimationFrame(main);
     }
     return;
   }
-
   window.requestAnimationFrame(main);
   const secondsSinceLastRender = (currentTime - lastTimeRender) / 1000;
   if (secondsSinceLastRender < 1 / SNAKE_SPEED) return;
@@ -21,7 +19,6 @@ function main(currentTime) {
   update();
   draw();
 }
-
 function update() {
   updateSnake();
   updateFood();
@@ -35,5 +32,4 @@ function draw() {
 function checkGameOver() {
   return isOutsideBoard(getSnakeHead()) || snakeSelfCollision();
 }
-
 window.requestAnimationFrame(main)
